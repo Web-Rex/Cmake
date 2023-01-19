@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /introduction/out
+/build/out
 ipch/
 *.aps
 *.ncb
