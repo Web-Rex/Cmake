@@ -4,6 +4,7 @@
 /node_modules
 /introduction/out
 /build/out
+/build_library/out
 ipch/
 *.aps
 *.ncb

@@ -1,0 +1,26 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "dll",
+      "exe": "",
+      "project": "CMakeLists.txt",
+      "projectTarget": "math.dll (src\\math.dll)",
+      "name": "math.dll (src\\math.dll)"
+    },
+    {
+      "type": "dll",
+      "exe": "",
+      "project": "CMakeLists.txt",
+      "projectTarget": "math.dll (bin\\math.dll)",
+      "name": "math.dll (bin\\math.dll)"
+    },
+    {
+      "type": "default",
+      "project": "CMakeLists.txt",
+      "projectTarget": "build_library.exe (bin\\build_library.exe)",
+      "name": "build_library.exe (bin\\build_library.exe)"
+    }
+  ]
+}
