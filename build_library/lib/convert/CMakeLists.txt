@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.8)
+# set(LIBRARY_OUTPUT_PATH  ${CMAKE_BINARY_DIR}/lib)
+
+if(${shared} MATCHES true)
+	print("share: ${share}")
+	add_library(convert SHARED convert.cpp)
+else(${shared} MATCHES false)
+	print("share: ${share}")
+	add_library(convert STATIC convert.cpp)
+endif()

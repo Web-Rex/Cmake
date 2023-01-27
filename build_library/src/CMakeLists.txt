@@ -28,12 +28,23 @@ function (building_library_separate_than_target share lib_path)
 
 	add_executable(${CMAKE_PROJECT_NAME} main.cpp)
 	target_link_libraries(${CMAKE_PROJECT_NAME} math)
+endfunction()
+
+function (build_library_as_sub_module_cmake)
+
+	add_executable(${CMAKE_PROJECT_NAME} main.cpp)
+	target_link_libraries(${CMAKE_PROJECT_NAME} convert)
 
 endfunction()
 
+build_library_as_sub_module_cmake()
 
-print("Shared library:${shared}")
-building_library_separate_than_target(${shared} ${library_path})
+target_compile_definitions( ${CMAKE_PROJECT_NAME}
+PRIVATE
+	OUT_LIB=${out_lib}
+)
+
+add_dependencies(${CMAKE_PROJECT_NAME} my_custom_target) # needed to make your [ add_custom_target ] work cause its [ BUILD ALL ] not [ BUILD ONE ]
 
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)

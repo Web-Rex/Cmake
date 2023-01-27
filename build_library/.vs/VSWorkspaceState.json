@@ -13,7 +13,9 @@
   },
   "ExpandedNodes": [
     "",
+    "\\lib",
     "\\src"
   ],
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
